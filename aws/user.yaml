@@ -1,0 +1,20 @@
+Resources:
+  atGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: atGroup
+  atUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: atUser
+      Groups:
+        - !Ref atGroup
+Outputs:
+  atUser:
+    Value: !Ref atUser
+    Export:
+      Name: atUser
+  atGroup:
+    Value: !Ref atGroup
+    Export:
+      Name: atGroup

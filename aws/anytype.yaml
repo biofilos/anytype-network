@@ -1,0 +1,9 @@
+Parameters:
+  s3Name:
+    Type: String
+    Default: anytype-assets
+Resources:
+  Users:
+    Type: "AWS::CloudFormation::Stack"
+    Properties:
+      TemplateURL: user.yaml

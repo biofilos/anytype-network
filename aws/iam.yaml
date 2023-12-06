@@ -1,0 +1,14 @@
+Resources:
+  s3Policy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: s3Policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:*
+            Resource: "*"
+      Users:
+        - !Ref atUser
